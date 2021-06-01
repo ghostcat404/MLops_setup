@@ -1,4 +1,4 @@
-mlflow=1.17.0
-catboost=0.25.1
-boto3=1.17.84
-python-dotenv=0.17.1
+mlflow==1.17.0
+catboost==0.25.1
+boto3==1.17.84
+python-dotenv==0.17.1
