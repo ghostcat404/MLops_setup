@@ -33,27 +33,27 @@ services:
     networks: 
       - mlflow
     ports:
-      - 5432:5432
+      - 5433:5432
     environment:
       POSTGRES_USER: ${POSTGRES_USER}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
       POSTGRES_DB: mlflow-db
       POSTGRES_INITDB_ARGS: "--encoding=UTF-8"
     hostname: postgresql
-    restart: always
+#    restart: always
   mlflow:
-    restart: always
+#    restart: always
     build: ./mlflow
     image: mlflow_server
     container_name: mlflow_server
     ports:
         - "5000:5000"
     networks: 
-        - mlflow
+      - mlflow
     environment:
-        - MLFLOW_S3_ENDPOINT_URL=http://s3:9000
-        - AWS_ACCESS_KEY_ID=${MINIO_ACCESS_KEY}
-        - AWS_SECRET_ACCESS_KEY=${MINIO_SECRET_KEY}
+      - MLFLOW_S3_ENDPOINT_URL=http://s3:9000
+      - AWS_ACCESS_KEY_ID=${MINIO_ACCESS_KEY}
+      - AWS_SECRET_ACCESS_KEY=${MINIO_SECRET_KEY}
     command: mlflow server --backend-store-uri postgresql+psycopg2://${POSTGRES_USER}:${POSTGRES_PASSWORD}@postgresql:5432/mlflow-db --default-artifact-root s3://mlflow/ --host 0.0.0.0
     depends_on: 
         - db
@@ -63,8 +63,8 @@ services:
     privileged: true
     user: root
     ports:
-      - 8081:8080
-      - 50000:50000
+      - "8081:8080"
+      - "50000:50000"
     container_name: jenkins
     networks: 
       - mlflow
@@ -72,6 +72,5 @@ services:
       - ./jenkins:/var/jenkins_home
       - /var/run/docker.sock:/var/run/docker.sock
       - /usr/local/bin/docker:/usr/local/bin/docker
-
 networks: 
   mlflow:
