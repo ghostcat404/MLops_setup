@@ -76,7 +76,7 @@ services:
     image: registry:2
     ports:
       - "6000:5000"
-    evironment:
+    environment:
       REGISTRY_STORAGE_FILESYSTEM_ROOTDIRECTORY: /data
     volumes:
       - ./data:/data
