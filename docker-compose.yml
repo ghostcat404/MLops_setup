@@ -72,5 +72,15 @@ services:
       - ./jenkins:/var/jenkins_home
       - /var/run/docker.sock:/var/run/docker.sock
       - /usr/local/bin/docker:/usr/local/bin/docker
+  docker_registry:
+    image: registry:2
+    ports:
+      - "6000:5000"
+    evironment:
+      REGISTRY_STORAGE_FILESYSTEM_ROOTDIRECTORY: /data
+    volumes:
+      - ./data:/data
+    networks:
+      - mlflow
 networks: 
   mlflow:
