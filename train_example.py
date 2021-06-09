@@ -8,7 +8,6 @@ from catboost import CatBoostRegressor
 load_dotenv()
 
 mlflow.set_tracking_uri("http://localhost:5000")
-mlflow.set_experiment("kyle-test")
 
 # Initialize data
 train_data = [[1, 4, 5, 6], [4, 5, 6, 7], [30, 40, 50, 60]]
