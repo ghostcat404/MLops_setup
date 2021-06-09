@@ -10,9 +10,8 @@ This repository is a step by step tutorial on deploying multiple MLops tools:
 
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
-- [Usage](#usage)
-  - [MLflow](#mlflow)
-  - [First Jenkins setup](#first-jenkins-setup)
+- [MLflow](#mlflow)
+- [First Jenkins setup](#first-jenkins-setup)
 - [Jenkins GitLab setup](#jenkins-gitlab-setup)
 
 ## Prerequisites
@@ -80,9 +79,7 @@ docker-compose stop
         conda install --file requirements.txt
         ```
 
-## Usage
-
-### MLflow
+## MLflow
 
 After all the containers are started, you can enter ```http://localhost:5000``` in your browser and you should see something like this
 ![plot](./img/mlflow_img.png)
@@ -95,7 +92,7 @@ python3 train_example.py
 
 and see experiment in MLflow UI
 
-### First Jenkins setup
+## First Jenkins setup
 
 - Go to ```https://localhost:8081```. You should see this window
 ![plot](./img/jenkins_enter_screen.png)
