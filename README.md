@@ -26,7 +26,7 @@ This repository is a step by step tutorial on deploying multiple MLops tools:
 
 ## Installation
 
-1. Create ```.env``` file at the root of the project and pass this variables:
+1. Create ```.env``` file at the root of the project and pass this variables
 
 ```bash
 MINIO_ACCESS_KEY=root
@@ -38,7 +38,13 @@ POSTGRES_USER=root
 POSTGRES_PASSWORD=toor
 ```
 
-2. Up containers via ```docker-compose```:
+2. Create mlflow bucket for s3 (minio) storage
+
+```bash
+mkdir -p ./buckets/mlflow
+```
+
+3. Up containers via ```docker-compose```
 
 ```bash
 docker-compose --env-file ./.env up -d
@@ -62,7 +68,7 @@ To stop all containers, run
 docker-compose stop
 ```
 
-3. Install python packages for mlflow
+4. Install python packages for mlflow
     - use only python3-pip:
 
         ```bash
@@ -184,3 +190,8 @@ After saving Jenkins will start scanning your repository and search for Jenkinsf
 Now Jenkins will automatically check the repository for changes and follow the instructions written in Jenkinsfile.
 
 ## Git hooks
+
+## ToDo list
+
+- [ ] Add minio notification setup
+- [ ] 
