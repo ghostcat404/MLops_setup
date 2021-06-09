@@ -155,9 +155,32 @@ jenkins      | *************************************************************
     - Find section ```GitLab```, click ```Add GitLab Server``` button and fill the form
     ![plot](./img/gitlabserver_form.png).
 
-    - In credentials section click ```Add, Jenkins```, choose ```GitLab Personal Access Token``` and paste copied token.
+    - In credentials section click ```Add, Jenkins```, choose ```GitLab Personal Access Token``` , paste copied token and click ```Add``` button
     ![plot](./img/gitlab_personal_token.png)
 
+    - Clik ```Test connection``` button. You should see: ```Credentials verified for user <your_gitlab_username>```
+
 ## Jenkins multibranch pipeline
+
+- Click ```New Item (Создать Item)``` and choose **Multibranch Pipeline** and click ```OK```.
+
+- Now you need to configure the project
+
+  - In ```Branch Sources``` section click ```Add source -> GitLab project```. Choose your gitlab server and enter gitlab username in field ```Owner```
+  ![plot](./img/gitlab_branch_sourses.png)
+
+  - Now you can choose your gitlab project in scope ```Projects```
+
+  - In ```Behaviours``` section you can configure branches and MR's behaviour. For example: filter branches by reqular expression (build only passed branches)
+  ![plot](./img/branch_behaviour.png)
+
+  - In the end configure scan repository triggers. You can choose scan period
+  ![plot](./img/scan_period.png)
+
+  - Click ```Save```.
+
+After saving Jenkins will start scanning your repository and search for Jenkinsfile (read [this](https://www.jenkins.io/doc/book/pipeline/jenkinsfile/) about Jenkinsfile and [this](https://www.jenkins.io/doc/book/pipeline/syntax/) about Pipeline Sytax. Also you can check Jenkinsfile example [there](./examples/_jenkins/Jenkinsfile)).
+
+Now Jenkins will automatically check the repository for changes and follow the instructions written in Jenkinsfile.
 
 ## Git hooks
