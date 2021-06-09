@@ -2,6 +2,7 @@
 # https://catboost.ai/docs/concepts/python-usages-examples.html#regression
 
 import mlflow
+from sklearn.pipeline import Pipeline
 from dotenv import load_dotenv
 from catboost import CatBoostRegressor
 
@@ -21,7 +22,9 @@ params = {
     "depth": 2,
     "allow_writing_files": False,
 }
-model = CatBoostRegressor(**params)
+model = Pipeline([
+    ('reg', CatBoostRegressor(**params))
+])
 
 # Fit model
 model.fit(train_data, train_labels)
@@ -29,11 +32,11 @@ model.fit(train_data, train_labels)
 # Log parameters and fitted model
 with mlflow.start_run() as run:
     mlflow.log_params(params)
-    mlflow.catboost.log_model(model, artifact_path="model")
+    mlflow.sklearn.log_model(model, artifact_path="model")
     model_uri = mlflow.get_artifact_uri("model")
 
 # Load model
-loaded_model = mlflow.catboost.load_model(model_uri)
+loaded_model = mlflow.sklearn.load_model(model_uri)
 
 # Get predictions
 preds = loaded_model.predict(eval_data)
