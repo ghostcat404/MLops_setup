@@ -179,7 +179,7 @@ jenkins      | *************************************************************
 
   - Click ```Save```.
 
-After saving Jenkins will start scanning your repository and search for Jenkinsfile (read [this](https://www.jenkins.io/doc/book/pipeline/jenkinsfile/) about Jenkinsfile and [this](https://www.jenkins.io/doc/book/pipeline/syntax/) about Pipeline Sytax. Also you can check Jenkinsfile example [there](./examples/_jenkins/Jenkinsfile)).
+After saving Jenkins will start scanning your repository and search for Jenkinsfile (read [this](https://www.jenkins.io/doc/book/pipeline/jenkinsfile/) about Jenkinsfile and [this](https://www.jenkins.io/doc/book/pipeline/syntax/) about Pipeline Sytax. ***Also you can check Jenkinsfile example [there](./examples/_jenkins/Jenkinsfile) from [this](https://github.com/ChesnovAE/simple_ml_model) simple project***).
 
 Now Jenkins will automatically check the repository for changes and follow the instructions written in Jenkinsfile.
 
