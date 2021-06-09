@@ -14,7 +14,8 @@ This repository is a step by step tutorial on deploying multiple MLops tools:
 - [Installation](#installation)
 - [MLflow](#mlflow)
 - [First Jenkins setup](#first-jenkins-setup)
-- [Jenkins GitLab setup](#jenkins-gitlab-setup)
+- [Jenkins GitLab Server setup](#jenkins-gitlab-server-setup)
+- [Jenkins multibranch pipeline](#jenkins-multibranch-pipeline)
 - [Git hooks](#git-hooks)
 
 ## Prerequisites
@@ -135,6 +136,28 @@ jenkins      | *************************************************************
 
 - follow finish steps and start using Jenkins
 
-## Jenkins GitLab setup
+## Jenkins GitLab Server setup
+
+1. Well... Fist of all you need to install some gitlab plugins
+
+    - Go to ```Manage Jenkins (Настроить Jenkins)``` and then go to ```Manage Plugins (Управление плагинами)```
+
+    - Go to ```available```  and install follow plugins
+    ![plot](./img/jenkins_gitlab_plugins.png)
+
+    - Restart Jenkins
+
+2. Next you need to configure GitLab Server in Jenkins
+    - You need to create and **copy or save token!** your personal access token (see [this tutorial](https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html)). ***Note: in scopes section choose ```api, read_user, read_repository```.***
+
+    - Go to ```Manage Jenkins (Настроить Jenkins)``` and then go to ```Configure system (Конфигурация системы)```
+
+    - Find section ```GitLab```, click ```Add GitLab Server``` button and fill the form
+    ![plot](./img/gitlabserver_form.png).
+
+    - In credentials section click ```Add, Jenkins```, choose ```GitLab Personal Access Token``` and paste copied token.
+    ![plot](./img/gitlab_personal_token.png)
+
+## Jenkins multibranch pipeline
 
 ## Git hooks
