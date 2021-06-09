@@ -11,10 +11,10 @@ This repository is a step by step tutorial on deploying multiple MLops tools:
 - [Prerequisites](#prerequisites)
 - [Installation](#installation)
 - [Usage](#usage)
-  - [MLflow](##mlflow)
-  - [Jenkins setup](##jenkins-setup)
-    - [First Jenkins setup](###first-jenkins-setup)
-    - [Jenkins GitLab setup](###jenkins-gitlab-setup)
+  - [MLflow](#mlflow)
+  - [Jenkins setup](#jenkins-setup)
+    - [First Jenkins setup](#first-jenkins-setup)
+    - [Jenkins GitLab setup](#jenkins-gitlab-setup)
 
 ## Prerequisites
 
