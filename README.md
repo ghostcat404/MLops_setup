@@ -151,7 +151,9 @@ jenkins      | *************************************************************
     - Go to ```available```  and install follow plugins
     ![plot](./img/jenkins_gitlab_plugins.png)
 
-    - Restart Jenkins
+    - Click ```Download and install after restart``` and then add checkbox ```restart after install (перезапустить Jenkins по окончанию ...)```
+
+    - Wait for Jenkins restart
 
 2. Next you need to configure GitLab Server in Jenkins
     - You need to create and **copy or save token!** your personal access token (see [this tutorial](https://docs.gitlab.com/ee/user/profile/personal_access_tokens.html)). ***Note: in scopes section choose ```api, read_user, read_repository```.***
