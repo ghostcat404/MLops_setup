@@ -12,9 +12,8 @@ This repository is a step by step tutorial on deploying multiple MLops tools:
 - [Installation](#installation)
 - [Usage](#usage)
   - [MLflow](#mlflow)
-  - [Jenkins setup](#jenkins-setup)
-    - [First Jenkins setup](#first-jenkins-setup)
-    - [Jenkins GitLab setup](#jenkins-gitlab-setup)
+  - [First Jenkins setup](#first-jenkins-setup)
+- [Jenkins GitLab setup](#jenkins-gitlab-setup)
 
 ## Prerequisites
 
@@ -96,9 +95,7 @@ python3 train_example.py
 
 and see experiment in MLflow UI
 
-### Jenkins setup
-
-#### First Jenkins setup
+### First Jenkins setup
 
 - Go to ```https://localhost:8081```. You should see this window
 ![plot](./img/jenkins_enter_screen.png)
@@ -133,6 +130,9 @@ jenkins      | *************************************************************
 
 - click install button and wait some minutes
 
-- 
+- create admin user
+![plot](./img/jenkins_admin_user.png)
 
-#### Jenkins GitLab setup
+- follow finish steps and start using Jenkins
+
+## Jenkins GitLab setup
