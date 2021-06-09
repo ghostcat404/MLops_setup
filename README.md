@@ -6,6 +6,8 @@ This repository is a step by step tutorial on deploying multiple MLops tools:
 - MLflow
 - Minio
 
+***Note: for testing this MLops setup, you can use [this repository](https://github.com/ChesnovAE/simple_ml_model)***
+
 ## Table of contents
 
 - [Prerequisites](#prerequisites)
