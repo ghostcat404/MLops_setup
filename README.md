@@ -195,6 +195,7 @@ Now Jenkins will automatically check the repository for changes and follow the i
 
 ## ToDo list
 
-- [x] Add MLflow example
-- [x] Add jenkins setups
+- [x] ~~Add MLflow example~~
+- [x] ~~Add jenkins setups~~
 - [ ] Add minio notification setup
+- [ ] Add jenkins automatically pull trained models
