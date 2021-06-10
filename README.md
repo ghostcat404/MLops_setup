@@ -17,6 +17,7 @@ This repository is a step by step tutorial on deploying multiple MLops tools:
 - [Jenkins GitLab Server setup](#jenkins-gitlab-server-setup)
 - [Jenkins multibranch pipeline](#jenkins-multibranch-pipeline)
 - [Git hooks](#git-hooks)
+- [ToDo list](#todo-list)
 
 ## Prerequisites
 
