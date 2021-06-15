@@ -8,6 +8,8 @@ This repository is a step by step tutorial on deploying multiple MLops tools:
 
 ***Note: for testing this MLops setup, you can use [this repository](https://github.com/ChesnovAE/simple_ml_model)***
 
+If this manual helped you, then please put a star :)
+
 ## Table of contents
 
 - [Prerequisites](#prerequisites)
