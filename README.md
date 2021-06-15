@@ -207,5 +207,6 @@ where ```git_template``` is template dir with hooks
 - [x] ~~Add MLflow example~~
 - [x] ~~Add jenkins setups~~
 - [x] ~~Add git hook template large files~~
+- [ ] Add linter hook template
 - [ ] Add minio notification setup
 - [ ] Add jenkins automatically pull trained models
