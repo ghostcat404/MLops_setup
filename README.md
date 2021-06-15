@@ -194,9 +194,18 @@ Now Jenkins will automatically check the repository for changes and follow the i
 
 ## Git hooks
 
+- For using git hooks you need to init your git repository with command
+
+```bash
+git init -template git_template
+```
+
+where ```git_template``` is template dir with hooks
+
 ## ToDo list
 
 - [x] ~~Add MLflow example~~
 - [x] ~~Add jenkins setups~~
+- [x] ~~Add git hook template large files~~
 - [ ] Add minio notification setup
 - [ ] Add jenkins automatically pull trained models
