@@ -6,12 +6,12 @@ pipeline {
         }
     }
     stages {
-        stage('build') {
+        stage('install requirements') {
             steps {
                 sh 'pip3 install -r requirements.txt'
             }
         }
-        stage('test') {
+        stage('run pytest') {
             steps {
                 sh 'pytest -vv .'
             }   

@@ -92,6 +92,12 @@ docker-compose stop
         conda install --file requirements.txt
         ```
 
+        or
+
+        ```bash
+        conda install -c conda-forge --file requirements.txt
+        ```
+
 ## MLflow
 
 After all the containers are started, you can enter ```http://localhost:5000``` in your browser and you should see something like this
